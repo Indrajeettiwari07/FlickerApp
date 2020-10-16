@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search History View-->
+        <scene sceneID="D52-hy-eIt">
+            <objects>
+                <viewController storyboardIdentifier="SearchHistory" id="fxc-2m-O4A" customClass="SearchHistoryView" customModule="FlickerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jpc-fS-y2m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Adz-pC-qB6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchHistoryCell" rowHeight="58" id="qnm-fu-eYu" customClass="SearchHistoryCell" customModule="FlickerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qnm-fu-eYu" id="5GW-1w-FaY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICQ-PX-rM8">
+                                                    <rect key="frame" x="20" y="20.5" width="37" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPr-0F-v7I">
+                                                    <rect key="frame" x="0.0" y="56" width="414" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="cEv-of-mgD"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ICQ-PX-rM8" firstAttribute="centerY" secondItem="5GW-1w-FaY" secondAttribute="centerY" id="5Mr-Bo-vTJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="GPr-0F-v7I" secondAttribute="bottom" constant="1" id="6FQ-Ir-yCa"/>
+                                                <constraint firstAttribute="trailing" secondItem="GPr-0F-v7I" secondAttribute="trailing" id="R0h-4u-lY3"/>
+                                                <constraint firstItem="ICQ-PX-rM8" firstAttribute="leading" secondItem="5GW-1w-FaY" secondAttribute="leading" constant="20" id="aYW-fD-3Z4"/>
+                                                <constraint firstItem="GPr-0F-v7I" firstAttribute="leading" secondItem="5GW-1w-FaY" secondAttribute="leading" id="raj-Uf-BSX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="searchedLabel" destination="ICQ-PX-rM8" id="02b-Z8-DCb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fxc-2m-O4A" id="n1T-L3-3BU"/>
+                                    <outlet property="delegate" destination="fxc-2m-O4A" id="YRc-8e-Po5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="y6l-MO-f0f" firstAttribute="bottom" secondItem="Adz-pC-qB6" secondAttribute="bottom" id="4EB-1m-kOQ"/>
+                            <constraint firstItem="Adz-pC-qB6" firstAttribute="leading" secondItem="jpc-fS-y2m" secondAttribute="leading" id="VM2-sL-cz4"/>
+                            <constraint firstItem="Adz-pC-qB6" firstAttribute="top" secondItem="y6l-MO-f0f" secondAttribute="top" id="cVt-8p-VSm"/>
+                            <constraint firstAttribute="trailing" secondItem="Adz-pC-qB6" secondAttribute="trailing" id="oop-fd-MHB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y6l-MO-f0f"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Adz-pC-qB6" id="BsO-DF-E6t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xuQ-3q-k7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.7971014492753632" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+</document>

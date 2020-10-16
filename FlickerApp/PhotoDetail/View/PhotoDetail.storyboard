@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Detail-->
+        <scene sceneID="Ju3-p7-NGP">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetail" id="SPq-co-lDM" customClass="PhotoDetail" customModule="FlickerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="46R-22-pij">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfz-JC-8Tz">
+                                <rect key="frame" x="0.0" y="24" width="414" height="838"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tag-8p-fng">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tag-8p-fng" secondAttribute="trailing" id="3kV-fS-txL"/>
+                                    <constraint firstItem="tag-8p-fng" firstAttribute="leading" secondItem="hfz-JC-8Tz" secondAttribute="leading" id="6UP-65-2Qe"/>
+                                    <constraint firstItem="tag-8p-fng" firstAttribute="centerY" secondItem="hfz-JC-8Tz" secondAttribute="centerY" id="Rjh-zz-gkY"/>
+                                    <constraint firstItem="tag-8p-fng" firstAttribute="centerX" secondItem="hfz-JC-8Tz" secondAttribute="centerX" id="bOc-P3-2ET"/>
+                                    <constraint firstAttribute="bottom" secondItem="tag-8p-fng" secondAttribute="bottom" id="p5i-gV-JBo"/>
+                                    <constraint firstItem="tag-8p-fng" firstAttribute="top" secondItem="hfz-JC-8Tz" secondAttribute="top" id="rKG-gF-Nvj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hfz-JC-8Tz" firstAttribute="bottom" secondItem="p9q-yw-12q" secondAttribute="bottom" id="Wte-aQ-ww0"/>
+                            <constraint firstItem="hfz-JC-8Tz" firstAttribute="top" secondItem="p9q-yw-12q" secondAttribute="top" constant="-20" id="hZi-mv-IJM"/>
+                            <constraint firstItem="hfz-JC-8Tz" firstAttribute="trailing" secondItem="p9q-yw-12q" secondAttribute="trailing" id="nYz-Gm-Se7"/>
+                            <constraint firstItem="hfz-JC-8Tz" firstAttribute="leading" secondItem="p9q-yw-12q" secondAttribute="leading" id="yLO-yH-tlO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p9q-yw-12q"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="tag-8p-fng" id="mut-ay-9Zf"/>
+                        <outlet property="scrollView" destination="hfz-JC-8Tz" id="c5R-mp-rn4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Cn-GQ-yFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3190" y="580"/>
+        </scene>
+    </scenes>
+</document>
