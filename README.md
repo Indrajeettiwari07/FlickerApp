@@ -3,10 +3,10 @@ Flickr app searches for images using Flickr API based on user's input and displa
 
 ### Features
 - FlickerApp provides the user the option to search the images based on the input provided in the search box. User gets list of images on Home screen. 
-- User can see the photos in a separate screen by seecting each image from the list.
+- User can see the photos in a separate screen by selecting each image from the list.
 - User will be able to Zoom in/out the images upto 5x.
 - The app stores the user's search histroy and shows the list of searched string under Search history tab.
-- App supports both light mode.
+- App supports light mode.
 - App supports portrait mode.
 - App has been localized for english and can be extended to support other language.
 - The app supports searches in online mode, whereas user can see the search histroy even in offline mode.
@@ -38,9 +38,9 @@ You would need a macbook with XCode 11.x installed. I built the app with XCode 1
 
 
 ## User Guide to use the app
-- On Launch, the first view when app starts is the Search screen which consists of Search bar on teh top and two tab items Search and Search Histrory on the bottom.  
-- User can type any string (E.g.- Amsterdam, Paris etc) inside the search box and on tapping enter will show the list of images on the home screen with 2 cloumns.
-- On tapping each images, it takes the user to next screen with with the photo and user can zoom in/out upto 5x. 
+- On Launch,  Search screen is shown on screen which consists of Search bar at the top and two tab items Search and Search Histrory at the bottom.  
+- User can type any string (E.g.- Amsterdam, Paris etc) inside the search box and on tapping Enter/Search will show the list of images on the home screen with 2 cloumns.
+- On tapping any image, Enlarged image is shown on next screen with with the photo and user can zoom in/out upto 5x. 
 - On tapping the Serach history tab, it will show the list of searched string in 'most recent at the top' manner.
 
 
@@ -59,13 +59,15 @@ You would need a macbook with XCode 11.x installed. I built the app with XCode 1
 ### Code Structure
 Code is divided into following Groups
 - APP  group contains the xcode auto generated AppDelegate and custom class Appcoordinator.
-- Constants group contains  Constant file which stores all the constants used across the app.
-- Utlities contains AlertService protocol, Extension, Helper, Screens, Reachability, Coordinator Protocols. This code is reusable generic code used through out the app.
+- Tabbar group contains the TabBarCoordinator which creates tabbar for the app.
+- Datamanager group contains the file which are responsible for persistance.
+- Utlities contains AlertService protocol, Extension, Helper, Screens, Reachability, Coordinator Protocols, Constants. This code is reusable generic code used through out the app.
 - Networking group contains all the files related to network layer. It contains sub groups of Reachability, NetworkHandler, NetworkRouting, HTTPHandlers, EndPoints and Services.
-- SearchView group contains the *Photo* model and SearchHistroy contains *SearchHistory* model, which being used in the app.
-- SearchView group contains the modules with their respective view, Collection view cells, Presenter, Interactor, Coordinator, Entity. 
+- Search group contains the *Photo* model and SearchHistroy contains *SearchHistory* model, which being used in the app.
+- Search, PhotoDetails and SearchHistory group contains the modules with their respective view, Collection view cells, Presenter, Interactor, Coordinator, Entity. 
 - SearchView subgroup contains *SearchView* for main Home screen view.  
 - SearchHistory subgroup contains *SearchHistory* for showing the list of recently searched strings.
+-PhotoDetail subgroup contains *PhotoDetail* for showing the selected photo.
 
 ### Unit Tests
 - Unit test are written and provide a code coverage of 81.9 percent. see the screenshot attached.
